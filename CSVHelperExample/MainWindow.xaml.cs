@@ -1,4 +1,4 @@
-﻿using System.Text;
+﻿ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -28,9 +28,29 @@ namespace CSVHelperExample
         {
 
             InitializeComponent();
-            importedRecords = CsvImporter.ImportSomeRecords(FILE_PATH).ToList();
+            importedRecords = CsvImporter.ImportSomeRecords(FILE_PATH);//.ToList();
+
+            List<Apple> myApples = new List<Apple>();
+            myApples.Add(new Apple(1, "apple1"));
+            myApples.Add(new Apple(2, "apple2"));
+            myApples.Add(new Apple(3, "apple3"));
+            myApples.Add(new Apple(4, "apple4"));
+            myApples.Add(new Apple(5, "apple5"));
+            myApples.Add(new Apple(6, "apple6"));
 
             data_Grid_Csv.DataContext = importedRecords;
+        }
+
+        public class Apple
+        {
+            public int id { get; set; }
+            public string name { get; set; } = string.Empty;
+
+            public Apple (int id, string name)
+            {
+                this.id = id;
+                this.name = name;
+            }
         }
 
         //Some EVENT
