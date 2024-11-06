@@ -14,7 +14,7 @@ namespace CSVHelperExample
     public partial class MainWindow : Window
     {
 
-        public const string FILE_PATH = @"C:\Users\User\Desktop\CSV_Helper_Example_Code\CSV_Helper_Example_Code\CSVHelperExample\some-data.csv";
+        public const string FILE_PATH = "some-data.csv";
         public List<CsvMap> importedRecords = new();
 
         /// <summary>
