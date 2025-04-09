@@ -17,7 +17,7 @@ namespace csvimport
 
         static void Main(string[] args)
         {
-            var filePath = @"C:\Users\User\Desktop\CSV_Helper_Example_Code\CSV_Helper_Example_Code\CSV_Helper_Example_Code\some-data.csv";
+            var filePath = @"some-data.csv";
 
 
             List<CsvPersonData> importedRecords = CsvImporter.ImportSomeRecords(filePath);

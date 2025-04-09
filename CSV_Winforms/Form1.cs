@@ -29,7 +29,7 @@ namespace CSV_Winforms
         //Read into datagrid
         private void button1_Click(object sender, EventArgs e)
         {
-            var fileName = @"C:\Users\User\Desktop\CSV_Helper_Example_Code\CSV_Helper_Example_Code\CSV_Winforms\some-data.csv";
+            var fileName = @"some-data.csv";
 
 
             List<CsvMap> importedRecords = CsvImporter.ImportSomeRecords(fileName);
@@ -40,11 +40,11 @@ namespace CSV_Winforms
         //Write to file using imported records
         private void button2_Click(object sender, EventArgs e)
         {
-            var fileName = @"C:\Users\User\Desktop\CSV_Helper_Example_Code\CSV_Helper_Example_Code\CSV_Winforms\some-data.csv";
+            var fileName = @"some-data.csv";
 
             List<CsvMap> importedRecords = CsvImporter.ImportSomeRecords(fileName);
 
-            var saveFileName = @"C:\Users\User\Desktop\CSV_Helper_Example_Code\CSV_Helper_Example_Code\CSV_Winforms\some-data" + DateTime.Now.ToFileTime() + ".csv";
+            var saveFileName = @"some-data" + DateTime.Now.ToFileTime() + ".csv";
 
             using (var writer = new StreamWriter(saveFileName))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
@@ -78,7 +78,7 @@ namespace CSV_Winforms
                 saveRecord.Add(data);
 
                 //New Save file
-                var saveFileName = @"C:\Users\User\Desktop\CSV_Helper_Example_Code\CSV_Helper_Example_Code\CSV_Winforms\save" + DateTime.Now.ToFileTime() + ".csv";
+                var saveFileName = @"some-data" + DateTime.Now.ToFileTime() + ".csv";
 
                 //Save the the record
                 using (var writer = new StreamWriter(saveFileName))
